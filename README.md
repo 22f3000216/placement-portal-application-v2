@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Placement Portal Application (PPA)
 
 Full-stack placement management system built with Flask + Vue 3 (CLI) + Bootstrap + SQLite + Redis + Celery + JWT.
@@ -62,3 +63,7 @@ http://localhost:8025
 - Student: register/edit profile (resume link, skills, experience), search and
   filter eligible drives, apply, track status, accept/decline offers, download
   offer letter, export CSV history.
+=======
+# placement-portal-application-v2
+A dummy placement portal application that enables users to register, log in, and apply for ongoing placement drives.
+>>>>>>> 2682fe8cf5615efcf78e5ce8446fb8df0d0ab646
