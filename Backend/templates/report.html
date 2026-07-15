@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><title>Monthly Placement Report</title></head>
+<body>
+  <h2>Monthly Placement Report</h2>
+
+  <h3>Summary Statistics</h3>
+  <p>Number of Drives Conducted: {{ total_drives }}</p>
+  <p>Total Applications Received: {{ total_applications }}</p>
+  <p>Total Students Placed: {{ total_placed }}</p>
+  <p>Average Package: {{ avg_package }}</p>
+
+  <h3>Application Status Breakdown</h3>
+  <table border="1" cellpadding="5">
+    <tr><th>Status</th><th>Count</th></tr>
+    {% for status, count in status_counts.items() %}
+    <tr><td>{{ status }}</td><td>{{ count }}</td></tr>
+    {% endfor %}
+  </table>
+
+  <h3>Placements by Company (Analytics)</h3>
+  <table border="1" cellpadding="5">
+    <tr><th>Company</th><th>Students Placed</th></tr>
+    {% for company, count in company_placement_counts.items() %}
+    <tr><td>{{ company }}</td><td>{{ count }}</td></tr>
+    {% endfor %}
+  </table>
+
+  <h3>Placement Details</h3>
+  <table border="1" cellpadding="5">
+    <tr><th>Student Name</th><th>Company</th><th>Package</th></tr>
+    {% for p in placements %}
+    <tr>
+      <td>{{ p.student_name }}</td>
+      <td>{{ p.company_name }}</td>
+      <td>{{ p.package }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
